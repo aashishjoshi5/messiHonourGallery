@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Roboto&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Bruno Ace', cursive;
+width: 100%;
+
+}
+h1{
+    font-size: 3rem;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.25rem;
+}
+.container{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+   
+}
+.top-box{
+    margin: 20px 0 0 20px;    
+}
+.top-box h3{
+    font-family: 'Roboto', sans-serif;
+    color:grey;
+
+}
+.gallery{
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 200px 200px 200px 200px;
+    grid-auto-rows: 200px;
+    margin: 20px;    
+}
+.box{
+    display: flex;
+    background-position: top;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: #222;
+    background-blend-mode: hard-light;
+    transition: all 1s ease-out;
+}
+.box:hover{
+    background-color: #999;
+    background-position: center;
+    box-shadow: 0 0 4px white;
+}
+.col-2{
+grid-column: span 2;
+}
+.row-2{
+    grid-row: span 2;
+}
+
+/* footer-section */
+.footer-text{
+    color: white;
+    background-color: #222;
+    padding-block: 40px;
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* media queries */
+@media screen and (width <=1024px) {
+    .container{
+        flex-direction: column;
+        padding-block: 20px;
+    }
+    .gallery{
+        width: 100%;
+        grid-auto-rows: 220px;
+    }
+    .box{
+        grid-row: span 1;
+        grid-column: span 3;
+
+    }
+
+}
